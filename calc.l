@@ -4,7 +4,7 @@
 
 %%
 [0-9]+(\.[0-9]+)? { yylval.dval = atof(yytext);
-		    printf("Token: NUMBER, VALUE: %f\n", yylval.dval);
+		   // printf("Token: NUMBER, VALUE: %f\n", yylval.dval);
 		    return NUMBER; }
 "sin"		  { return SIN; }
 "cos"		  { return COS; }
