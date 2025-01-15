@@ -14,9 +14,9 @@
 "factorial"	  { return FACTORIAL;}
 [+\-*/^!()]	  { return yytext[0]; }
 [ \t]		  { /*Ignore white spaces */ }
-\n		      { return '\n'; }
-"quit"|"exit" { return CMD_EXT; }
-.		      { printf("Unknown character: %s\n", yytext); }
+\n		  { return '\n'; }
+"quit"|"exit"	  { return CMD_EXT; }
+.		  { printf("Unknown character: %s\n", yytext); }
 %%
 
 int yywrap() {
